@@ -77,23 +77,7 @@ function calcularValor (codigoProducto, codigoIngresado) {
 
 calcularValor (codigoProducto, codigoIngresado);
 
-// 
 
-// let precioBikini = 2000
-// let precioEnteriza = 2500
-// let precioPareo = 1300
-
-// let eleccionPago = prompt ("Deseas hacer el pago en cuotas?")
-
-// function calcularPrecio ()
-
-// const calculoPrecio1  = (precioBikini, valorDescuento) => { return a };
-
-// const calculoPrecio2  = (a) => { return a*PORCENTAJEDESCUENTO2 };
-
-// const calculoPrecio3  = (a) => { return a*EXTRACUOTASDESCUENTO };
-
-// const calculoPrecio4  = (a) => { return a*EXTRACUOTASSINDESCUENTO };
 
 
 
