@@ -1,0 +1,20 @@
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.portada__img {
+    background-image: url(../images/fotos/img-header.jpg);
+    background-size: cover;
+    height: 80vh;
+
+}
+
+.home__textoPrincipal {
+
+    padding-top: 3%;
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}

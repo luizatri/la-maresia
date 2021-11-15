@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACIA,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;CAEf;;AAED,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,qBAAqB;EAClC,KAAK,EAAC,OAAO;EACb,gBAAgB,EAAE,KAAK;CAM1B;;AATD,AAKE,IALE,CAKF,CAAC,CAAC;EACA,eAAe,EAAE,IAAI;CACvB",
+    "sources": [
+        "main.scss",
+        "1-globales/_reset.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

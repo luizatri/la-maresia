@@ -1,4 +1,5 @@
 
+// DESAFIO CLASE 05
 
 function validarEntrada (input, condicion1, condicion2) {
     if (condicion1.toLowerCase() === input.toLowerCase() || condicion2.toLowerCase() === input.toLowerCase()) {
@@ -56,30 +57,68 @@ function valorEleccion (codigoProducto) {
 
 }
 
+function productoElegido (codigoProducto) {
+    switch (codigoProducto) {
+        case 1:
+            return "bikíni";
+            break;
+        case 2:
+            return "enteriza";
+            break;
+        case 3:
+            return "pareo";
+            break;
+        default:
+            return -1;
+            break
+    }
+
+}
+
 
 let codigoIngresado = prompt ("Si tienes un codigo de descuento, ingresalo ahora:");
 
 
 function calcularValor (codigoProducto, codigoIngresado) {
 
+    
     let precioDeLista = valorEleccion (codigoProducto);
+    let valorFinalProducto = 0;
 
     if (codigoIngresado.toLowerCase () === "micodigo"){
-        let valorFinalProducto = precioDeLista - (precioDeLista*0.20);
-        alert ("El precio de tu producto con un 20% de descuento es " + valorFinalProducto);
+        valorFinalProducto = precioDeLista - (precioDeLista*0.20);
     }
 
     else {
-        alert ("El precio de tu producto es " + precioDeLista);
+        valorFinalProducto = precioDeLista;
     }
+
+    return valorFinalProducto;
     
 }
 
-calcularValor (codigoProducto, codigoIngresado);
+
+// calcularValor (codigoProducto, codigoIngresado);
 
 
+class Compra {
+    constructor (talle, producto, valor){
+        this.talle = talle;
+        this.producto = producto;
+        this.valor = valor;
+    }
 
+    finalizar () {
+        alert ("Muchas gracias por tu compra. Tu " + this.producto + ", " + "talle " + this.talle + ", valor " + this.valor + " se entregará en hasta 3 días hábiles.")
+    }
+}
 
+    // const compra1 = new Compra ("S", "bikini", 2500)
 
+let valorFinalProducto = calcularValor (codigoProducto, codigoIngresado);
+let producto = productoElegido (codigoProducto);
 
+const compra1 = new Compra (talleUsuario, producto, valorFinalProducto);
+
+compra1.finalizar();
 
