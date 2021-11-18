@@ -1,5 +1,4 @@
 
-// DESAFIO CLASE 05
 
 function validarEntrada (input, condicion1, condicion2) {
     if (condicion1.toLowerCase() === input.toLowerCase() || condicion2.toLowerCase() === input.toLowerCase()) {
@@ -97,8 +96,6 @@ function calcularValor (codigoProducto, codigoIngresado) {
     
 }
 
-
-// calcularValor (codigoProducto, codigoIngresado);
 
 
 class Compra {
