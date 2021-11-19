@@ -1,121 +1,71 @@
 
+// DESAFIO CLASE 06 ARRAYS
 
-function validarEntrada (input, condicion1, condicion2) {
-    if (condicion1.toLowerCase() === input.toLowerCase() || condicion2.toLowerCase() === input.toLowerCase()) {
-        return true;
+class Producto {
+    constructor (categoria, nombre, color, talle, precio) {
+        this.categoria = categoria.toLowerCase();
+        this.nombre = nombre.toLowerCase();
+        this.color = color.toLowerCase();
+        this.talle = talle.toLowerCase();
+        this.precio = parseFloat(precio);
     }
-
-    return false;
-
-}
-
-let saludoBeneficio = prompt("Bienvenid@! Te gustaria acceder a un beneficio exclusivo?");
-
-if (validarEntrada(saludoBeneficio, "si", "sí")) {
-    alert ("Tu código exclusivo por un descuento de 20% es MICODIGO.")
-}   
-else {
-    alert ("Que pena! Todavía podrás pagar tus compras en cuotas.");
-}
-
-let talleUsuario= prompt("¿Cuál es tu talle? Small, Medium o Large?");
-
-if (validarEntrada(talleUsuario, "small", "s")) {
-    alert ("Hay bikinis y enterizas disponibles.");
-}
-
-else if (validarEntrada(talleUsuario, "medium", "m")) {
-    alert ("Solo hay bikinis disponibles.");
-}
-
-else if (validarEntrada(talleUsuario, "large", "l")) {
-    alert ("Hay bikinis, enterizas y pareos disponibles.");
-}
-
-else {
-    alert ("No has ingresado ningún talle. Puedes consultar la disponibilidad en el sitio.");
-}
-
-let codigoProducto = parseInt (prompt("Ingrese el código de tu producto: 1 para bikinis, 2 para enterizas y 3 para pareos."));
-
-function valorEleccion (codigoProducto) {
-    switch (codigoProducto) {
-        case 1:
-            return 2000;
-            break;
-        case 2:
-            return 2500;
-            break;
-        case 3:
-            return 1300;
-            break;
-        default:
-            return -1;
-            break
-    }
-
-}
-
-function productoElegido (codigoProducto) {
-    switch (codigoProducto) {
-        case 1:
-            return "bikíni";
-            break;
-        case 2:
-            return "enteriza";
-            break;
-        case 3:
-            return "pareo";
-            break;
-        default:
-            return -1;
-            break
-    }
-
-}
-
-
-let codigoIngresado = prompt ("Si tienes un codigo de descuento, ingresalo ahora:");
-
-
-function calcularValor (codigoProducto, codigoIngresado) {
 
     
-    let precioDeLista = valorEleccion (codigoProducto);
-    let valorFinalProducto = 0;
-
-    if (codigoIngresado.toLowerCase () === "micodigo"){
-        valorFinalProducto = precioDeLista - (precioDeLista*0.20);
+    codigoDescuento() {
+        this.precio = this.precio + this.precio * 0.20;
     }
 
-    else {
-        valorFinalProducto = precioDeLista;
-    }
-
-    return valorFinalProducto;
-    
 }
 
 
+const productos = [];
 
-class Compra {
-    constructor (talle, producto, valor){
-        this.talle = talle;
-        this.producto = producto;
-        this.valor = valor;
-    }
+/* bikinis*/
 
-    finalizar () {
-        alert ("Muchas gracias por tu compra. Tu " + this.producto + ", " + "talle " + this.talle + ", valor " + this.valor + " se entregará en hasta 3 días hábiles.")
-    }
-}
+productos.push (new Producto ("bikini","mar griego", "azul", "M", 2000));
+productos.push (new Producto ("bikini","vino francés", "azul", "S", 2000));
+productos.push (new Producto ("bikini","sol de toscana", "amarillo", "M", 2000));
 
-    // const compra1 = new Compra ("S", "bikini", 2500)
 
-let valorFinalProducto = calcularValor (codigoProducto, codigoIngresado);
-let producto = productoElegido (codigoProducto);
+/* enterizas*/
 
-const compra1 = new Compra (talleUsuario, producto, valorFinalProducto);
+productos.push (new Producto ("enteriza","rio de janeiro", "naranja", "M", 2500));
+productos.push (new Producto ("enteriza","salvador", "celeste", "S", 2500));
+productos.push (new Producto ("enteriza","porto seguro", "violeta", "M", 2500));
 
-compra1.finalizar();
+/* pareos*/
 
+productos.push (new Producto ("pareo","sandia", "rojo", "", 1300));
+productos.push (new Producto ("pareo","melon", "verde", "", 1300));
+productos.push (new Producto ("pareo","uva", "violeta", "", 1300));
+
+
+for (const producto of productos)
+    producto.codigoDescuento();
+
+console.log(productos);
+
+const talleM = productos.filter(producto => producto.talle === "m");
+console.log(talleM);
+
+const buscarRojo = productos.find(producto => producto.color === "rojo"); 
+console.log(buscarRojo);
+
+const caros = productos.filter(producto => producto.precio > 2000); 
+console.log(caros);
+
+
+// DESAFIO COMPLEMENTARIO CLASE 06 ARRAYS - ORDENAR
+
+const pedidoCliente01 =[
+    {categoria: "bikini", nombre: "mar griego", color:"azuk", precio: 2000},
+    {categoria: "enteriza", nombre: "salvador", color:"celeste", precio: 2500},
+    {categoria: "pareo", nombre: "sandia", color:"rojo", precio: 1300},
+]
+
+
+const ordenPedido = pedidoCliente01.sort(function(a,b){
+    return (a.precio-b.precio);
+})
+
+console.log(ordenPedido);
