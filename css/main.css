@@ -44,4 +44,15 @@ MEDIA QUERY 576px
 .home__textoPrincipal h1 {
   font-size: 1.5rem;
 }
+
+.formulario__newsletter {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ebebeb;
+  text-align: right;
+}
+
+label {
+  font-weight: bolder;
+}
 /*# sourceMappingURL=main.css.map */
