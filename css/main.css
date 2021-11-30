@@ -45,7 +45,18 @@ MEDIA QUERY 576px
   font-size: 1.5rem;
 }
 
-.index__productosDestacados {
+#index__productosDestacados .row {
   --bs-gutter-x: 0rem;
+}
+
+.formulario__newsletter {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ebebeb;
+  text-align: right;
+}
+
+label {
+  font-weight: bolder;
 }
 /*# sourceMappingURL=main.css.map */

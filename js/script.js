@@ -117,6 +117,24 @@ const compra1 = new Compra (talleUsuario, producto);
 compra1.finalizar();
 
 
+/////////////// EVENTOS
+
+let boton = document.getElementById("btnProducto01")
+      boton.addEventListener("click", respuestaClick)
+      function respuestaClick(){
+        console.log("Producto 01 ha sido agregado al carrito.");
+      }
+
+
+let miFormulario = document.getElementById("formNewsletter");
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e){
+    e.preventDefault();
+    console.log("Nuevo email registrado en la base de datos.");    
+}
+
+
 
 /// FUNCIONES
 
@@ -157,15 +175,15 @@ function comunicarDisponibilidad (){
     switch(talleUsuario) {
         case "small":
         case "s":
-            prompt (`Ingresa el precio del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleS)} \n`);
+            prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleS)} \n`);
             break;
         case "medium":
         case "m":
-            prompt (`Ingresa el precio del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleM)} \n`);
+            prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleM)} \n`);
             break;
         case "large":
         case "l":
-            prompt (`Ingresa el precio del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleL)} \n`);
+            prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleL)} \n`);
             break;
         default:
             alert("No has ingresado ningún talle. Tu pedido no ha sido registrado.");
