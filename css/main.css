@@ -44,4 +44,8 @@ MEDIA QUERY 576px
 .home__textoPrincipal h1 {
   font-size: 1.5rem;
 }
+
+.index__productosDestacados {
+  --bs-gutter-x: 0rem;
+}
 /*# sourceMappingURL=main.css.map */
