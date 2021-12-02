@@ -19,6 +19,8 @@
 <body>
 
   <header>
+
+
     <!-- INICIO NAV BAR -->
 
 
@@ -49,6 +51,15 @@
     </nav>
 
     <!-- FIN NAV BAR -->
+
+    <div class="row fixed-top textoDescuento">
+
+      <div class="col-12">
+        <h6>15% DE DESCUENTO USANDO EL CODIGO <span> MIVERANO </span> </h6>
+      </div>
+    
+    </div>
+
   </header>
 
   <main>
@@ -65,30 +76,30 @@
       <!-- FIN IMG DESTACADA / CARRUSEL -->
 
 
-        <!---- INICIO NEWSLETTER ------------------>
+      <!---- INICIO NEWSLETTER ------------------>
 
-        <div class="row">
+      <div class="row">
 
-          <form id="formNewsletter" class="formulario__newsletter">
+        <form id="formNewsletter" class="formulario__newsletter">
 
-            <div class="form-group row justify-content-center">
+          <div class="form-group row justify-content-center">
 
-              <label for="colFormLabel" class="col-sm-5 col-form-label">Suscríbete a nuestra newsletter:</label>
+            <label for="colFormLabel" class="col-sm-5 col-form-label">Suscríbete a nuestra newsletter:</label>
 
-              <div class="col-sm-5">
+            <div class="col-sm-5">
 
-                <input type="email" class="form-control" id="colFormLabel"
-                  placeholder="ingresa tu e-mail para recibirlo">
-
-              </div>
+              <input type="email" class="form-control" id="colFormLabel" placeholder="ingresa tu e-mail para recibirlo">
 
             </div>
 
-          </form>
+          </div>
 
-        </div>
+        </form>
 
-        <!---- FIN NEWSLETTER -------->
+      </div>
+
+      <!---- FIN NEWSLETTER -------->
+
 
       <!-- INICIO TEXTO ABOUT HOME -->
 
@@ -113,78 +124,126 @@
 
       <!-- FIN TEXTO ABOUT HOME -->
 
+      <!-- INICIO FILTRO TALLE Y PRODUCTO -->
+
+      <div class="row justify-content-center">
+        <div class="col-3">
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Producto</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bikínis</a></li>
+              <li><a class="dropdown-item" href="#">Enterizas</a></li>
+              <li><a class="dropdown-item" href="#">Pareos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Todos los productos</a></li>
+            </ul>
+            <input type="text" placeholder="Ingresa tu talle" class="form-control"
+              aria-label="Text input with dropdown button">
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- FIN FILTRO TALLE Y PRODUCTO -->
+
+
 
       <!-- INICIO LINEA PRODUCTOS DESTACADOS  -->
 
-
       <div class="row justify-content-center">
 
-        <div class="col-8">
+        <div class="col-8 card-group">
 
-          <div class="row row-cols-1 row-cols-md-4 g-4">
-
-            <div class="col">
-              <div class="card">
-                <img src="images/fotos/destacado1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">$ 2.100,00</h5>
-                  <button id="btnProducto01" class="btn btn-primary">Agregar al carrito</button>
-                </div>
-              </div>
+          <div class="card">
+            <img src="images/fotos/destacado1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bikíni Vainilla</h5>
+              <p class="card-text">$ 4.500,00</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
             </div>
-
-            <div class="col">
-              <div class="card">
-                <img src="images/fotos/destacado2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">$ 3.300,00</h5>
-                  <button id="btnProducto02" class="btn btn-primary">Agregar al carrito</button>
-                </div>
-              </div>
-
-
-              <div class="col">
-                <div class="card">
-                  <img src="images/fotos/destacado3.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">$ 1.900,00</h5>
-                    <button id="btnProducto03" class="btn btn-primary">Agregar al carrito</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card">
-                  <img src="images/fotos/destacado4.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">$ 4.500,00</h5>
-                    <button id="btnProducto04" class="btn btn-primary">Agregar al carrito</button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
           </div>
 
+          <div class="card">
+            <img src="images/fotos/destacado2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Top Floresta</h5>
+              <p class="card-text">$ 3.800,00</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/fotos/destacado4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bikíni Turquía</h5>
+              <p class="card-text">$ 2.900,00</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-8 card-group">
+
+          <div class="card">
+            <img src="images/fotos/destacado1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bikíni Vainilla</h5>
+              <p class="card-text">$ 4.500,00</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/fotos/destacado2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Top Floresta</h5>
+              <p class="card-text">$ 3.800,00</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/fotos/destacado4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bikíni Turquía</h5>
+              <p class="card-text">$ 2.900,00</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
 
         </div>
 
 
-        <!-- FIN LINEA DE PRODUCTOS DESTACADOS -->
-
-
-        <!-- INICIO COLECCIONES -->
-
-
-        <!-- COLECCION 01 -->
-
-        <!-- COLECCION 02 -->
-
-        <!-- COLECCION 03 -->
-
-
       </div>
+
+
+
+
+
+
+
+
+
+      <!-- FIN LINEA DE PRODUCTOS DESTACADOS -->
+
+
+      <!-- INICIO COLECCIONES -->
+
+
+      <!-- COLECCION 01 -->
+
+      <!-- COLECCION 02 -->
+
+      <!-- COLECCION 03 -->
+
+
+    </div>
 
   </main>
 
@@ -199,7 +258,7 @@
 
   <script src="js/bootstrap.min.js"></script>
   <!-- <script src="js/script.js"></script> -->
-  <script src="js/script.js"></script>
+  <!-- <script src="js/script.js"></script> -->
 
 
 </body>

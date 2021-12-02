@@ -15,6 +15,26 @@ body a {
   text-decoration: none;
 }
 
+.textoDescuento {
+  background-color: #575654;
+  color: #cecdca;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.textoDescuento h6 {
+  font-size: 10px;
+}
+
+.textoDescuento h6 span {
+  font-weight: bolder;
+  color: #ebe9e7;
+}
+
+.navbar {
+  padding-top: 30px;
+}
+
 /* ==========================================
 
 MEDIA QUERY 576px
