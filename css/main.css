@@ -31,8 +31,16 @@ body a {
   color: #ebe9e7;
 }
 
+#shoppingIcon {
+  width: 50%;
+}
+
 .navbar {
   padding-top: 30px;
+}
+
+.modal-content {
+  margin-top: 40%;
 }
 
 /* ==========================================
