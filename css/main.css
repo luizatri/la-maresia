@@ -83,4 +83,8 @@ MEDIA QUERY 576px
 label {
   font-weight: bolder;
 }
+
+.card-template {
+  visibility: hidden;
+}
 /*# sourceMappingURL=main.css.map */

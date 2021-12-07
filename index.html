@@ -162,7 +162,7 @@
           <!-- Button trigger modal -->
 
           <div class="col-2">
-            <button type="" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="" class="btn" data-bs-toggle="modal" data-bs-target="#shoppingCart">
            <a class="nav-link" href="#"><img src="images/icons/shoppingcartbutton.png" id="shoppingIcon"
                   alt="shopping cart"></a>
             </button>
@@ -173,7 +173,7 @@
 
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          <div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -183,8 +183,8 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-                  Muy pronto novedades de este proyecto.
+                <div class="modal-body" id="productosCarrito">
+
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -203,68 +203,15 @@
 
     <!-- INICIO LINEA PRODUCTOS DESTACADOS  -->
 
-    <div class="row justify-content-center">
-
-      <div class="col-8 card-group">
-
-        <div class="card">
-          <img src="images/fotos/destacado1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Bikíni Vainilla</h5>
-            <p class="card-text">$ 4.500,00</p>
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-          </div>
+    <div id="row-container" class="row justify-content-center">
+      <div class="card card-template">
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary" id="producto1"> Agregar al carrito 🛒</a>
+          <a href="#" class="btn btn-primary" id="product6">🗑️</a>
         </div>
-
-        <div class="card">
-          <img src="images/fotos/destacado2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Top Floresta</h5>
-            <p class="card-text">$ 3.800,00</p>
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/fotos/destacado4.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Bikíni Turquía</h5>
-            <p class="card-text">$ 2.900,00</p>
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-8 card-group">
-
-        <div class="card">
-          <img src="images/fotos/destacado1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Bikíni Vainilla</h5>
-            <p class="card-text">$ 4.500,00</p>
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/fotos/destacado2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Top Floresta</h5>
-            <p class="card-text">$ 3.800,00</p>
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="images/fotos/destacado4.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Bikíni Turquía</h5>
-            <p class="card-text">$ 2.900,00</p>
-            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-          </div>
-        </div>
-
       </div>
 
 
