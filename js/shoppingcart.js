@@ -44,15 +44,6 @@ const productos = [{ id: 1, categoria: "Bikini", modelo: "vainilla".toUpperCase(
                    { id: 8, categoria: "Pareo", modelo: "melon".toUpperCase(), color: "verde", talle: "U", precio: 1300, imgSrc: "images/fotos/destacado8.jpg"},
                    { id: 9, categoria: "Pareo", modelo: "uva".toUpperCase(), color: "violeta", talle: "U", precio: 1300, imgSrc: "images/fotos/destacado9.jpg"}]
 
-// const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor)};
-
-// for (const producto of productos) {
-//     guardarLocal(producto.id, JSON.stringify(producto))
-// }
-
-// guardarLocal("listaProductos", JSON.stringify(productos));
-
-// const almacenados = JSON.parse (localStorage.getItem("listasProductos"));
 
 let rowNumber = 0;
 let rowContainer = document.getElementById("row-container");
@@ -77,14 +68,19 @@ for (let i = 0; i < productos.length; i++) {
     let img = newCard.getElementsByClassName("card-img-top")[0];
     let title = newCard.getElementsByClassName("card-title")[0];
     let price = newCard.getElementsByClassName("card-text")[0];
+    let agregar = newCard.getElementsByClassName("agregar")[0];
+    let borrar = newCard.getElementsByClassName("borrar")[0];
 
     img.src = producto.imgSrc;
     title.innerHTML = `${producto.categoria} - ${producto.modelo}`;
     price.innerHTML = `$ ${producto.precio}`;
 
+    agregar.id = `agregar-${producto.id}`;
+    borrar.id = `borrar-${producto.id}`;
+
+
+    
     row.appendChild(newCard);
+
 } 
-
-
-
 
