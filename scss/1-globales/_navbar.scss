@@ -22,9 +22,91 @@
 .navbar {
     padding-top: 30px;
 
+    span {
+        font-weight: bolder;
+        color:black;
+    }
+
 }
 
+// SHOPPING CART
 
+
+.cart-info__icon {
+    color: var(--mainBlack);
+    cursor: pointer;
+  }
+  
+  .cart-info {
+    border: 0.1rem solid var(--mainBlack);
+    color: var(--mainBlack);
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+  }
+  .cart-info:hover {
+    background: var(--mainPink);
+    border-color: var(--mainPink);
+    color: var(--mainWhite);
+  }
+  .cart-info:hover .cart-info__icon {
+    color: var(--mainWhite);
+  }
+
+
+  /* cart  */
+.cart {
+    position: absolute;
+    min-height: 10rem;
+    background: var(--mainWhite);
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    width: 18rem;
+    overflow: hidden;
+  }
+  .show-cart {
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+  }
+  .cart-item {
+    transition: all 2s ease-in-out;
+  }
+  
+  /* end of cart */
+  /* cart item */
+  .cart-item-remove {
+    color: var(--mainPink);
+    transition: all 1s ease-in-out;
+  }
+  .cart-item-remove:hover {
+    transform: scale(1.1);
+    color: var(--mainBlack);
+  }
+  #cart-item-price {
+    font-size: 0.8rem;
+  }
+  /* cart item */
+  /* cart buttons */
+  .btn-pink {
+    color: var(--mainPink) !important;
+    border-color: var(--mainPink) !important;
+  }
+  .btn-black {
+    color: var(--mainBlack) !important;
+    border-color: var(--mainBlack) !important;
+  }
+  .btn-black:hover {
+    color: var(--mainPink) !important;
+    background: var(--mainBlack) !important;
+  }
+  .btn-pink:hover {
+    background: var(--mainPink) !important;
+    color: var(--mainBlack) !important;
+  }
+  /* end of cart buttons */
 
 
   // MODAL SHOPPING CART

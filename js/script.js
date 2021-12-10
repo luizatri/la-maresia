@@ -1,9 +1,8 @@
-
 class Producto {
     constructor (id, categoria, nombre, color, talle, precio) {
         this.id = parseFloat(id);
         this.categoria = categoria.toLowerCase();
-        this.nombre = nombre.toLowerCase();
+        this.modelo = modelo.toLowerCase();
         this.color = color.toLowerCase();
         this.talle = talle.toLowerCase();
         this.precio = parseFloat(precio);
@@ -35,211 +34,79 @@ class Producto {
 
 }
 
-class Compra {
-
-    constructor (talle, producto){
-        this.talle = talle;
-        this.producto = producto;
-        this.valor = buscarPrecio;
-    }
-
-    finalizar () {
-        alert ("Muchas gracias por tu compra. Tu " + this.producto + ", " + "talle " + this.talle + ", valor " + this.valor + " se entregará en hasta 3 días hábiles.")
-    }
-}
+const productos = [{ id: 1, categoria: "Bikini", modelo: "vainilla".toUpperCase(), color: "blanco", talle: "S", precio: 2000, imgSrc: "images/fotos/destacado1.jpg"},
+                   { id: 2, categoria: "Bikini", modelo: "sol de toscana".toUpperCase(), color: "amarillo", talle: "M", precio: 2000, imgSrc: "images/fotos/destacado2.jpg"},
+                   { id: 3, categoria: "Bikini", modelo: "mar griego".toUpperCase(), color: "azul", talle: "M", precio: 2000, imgSrc: "images/fotos/destacado3.jpg"},
+                   { id: 4, categoria: "Enteriza", modelo: "caraiva".toUpperCase(), color: "naranja", talle: "L", precio: 2500, imgSrc: "images/fotos/destacado4.jpg"},
+                   { id: 5, categoria: "Enteriza", modelo: "salvador".toUpperCase(), color: "celeste", talle: "S", precio: 2500, imgSrc: "images/fotos/destacado5.jpg"},
+                   { id: 6, categoria: "Enteriza", modelo: "porto seguro".toUpperCase(), color: "violeta", talle: "L", precio: 2500, imgSrc: "images/fotos/destacado6.jpg"},
+                   { id: 7, categoria: "Pareo", modelo: "sandia".toUpperCase(), color: "rojo", talle: "U", precio: 1300, imgSrc: "images/fotos/destacado7.jpg"},
+                   { id: 8, categoria: "Pareo", modelo: "melon".toUpperCase(), color: "verde", talle: "U", precio: 1300, imgSrc: "images/fotos/destacado8.jpg"},
+                   { id: 9, categoria: "Pareo", modelo: "uva".toUpperCase(), color: "violeta", talle: "U", precio: 1300, imgSrc: "images/fotos/destacado9.jpg"}]
 
 
+let rowNumber = 0;
+let rowContainer = document.getElementById("row-container");
+let templateCard = document.getElementsByClassName("card-template")[0];
 
+for (let i = 0; i < productos.length; i++) {
+    let producto = productos[i];
+    let row = document.getElementById(`row-${rowNumber}`);
 
-function obtenerProductos() {
-    const productos = [];
-    productos.push(new Producto(1, "bikini", "mar griego", "azul", "M", 2000));
-    productos.push(new Producto(2, "bikini", "vino francés", "azul", "S", 2000));
-    productos.push(new Producto(3, "bikini", "sol de toscana", "amarillo", "M", 2000));
-
-
-    /* enterizas*/
-    productos.push(new Producto(4, "enteriza", "rio de janeiro", "naranja", "L", 2500));
-    productos.push(new Producto(5, "enteriza", "salvador", "celeste", "S", 2500));
-    productos.push(new Producto(6, "enteriza", "porto seguro", "violeta", "L", 2500));
-
-    /* pareos*/
-    productos.push(new Producto(7, "pareo", "sandia", "rojo", "U", 1300));
-    productos.push(new Producto(8, "pareo", "melon", "verde", "U", 1300));
-    productos.push(new Producto(9, "pareo", "uva", "violeta", "U", 1300));
-
-    return productos;
-}
-
-
-// INICIO DEL ALGORITMO
-
-
-let nombreUsuario = prompt("Bienvenid@! Ingrese tu nombre:");
-let saludoBeneficio = prompt("Hola " + nombreUsuario + "! Te gustaria acceder a un beneficio exclusivo?");
-
-if (validarEntrada(saludoBeneficio, "si", "sí")) {
-    alert ("Tu código exclusivo por un descuento de 20% es MICODIGO.")
-}
-else {
-    alert ("Que pena! Todavía podrás pagar tus compras en cuotas.");
-}
-
-
-let talleUsuario = prompt("¿Cuál es tu talle? Small, Medium o Large?");
-
-
-const productos = obtenerProductos();
-
-let talleS = productos.filter(producto => producto.talle === "s")
-let talleM = productos.filter(producto => producto.talle === "m");
-let talleL = productos.filter(producto => producto.talle === "l");
-
-console.log (talleS);
-
-let articulo1 = comunicarDisponibilidad();
-
-///////// Esta parte no me funciona! No devuelve ningun valor. Deberia identificar el articulo por su ID; y despues el precio del producto con ese ID. 
-
-const buscarArticulo = productos.filter (producto => producto.id === articulo1);
-const buscarPrecio = buscarArticulo.find (precio => precio > 3);
-
-///////////////////
-
-
-let codigoIngresado = prompt ("Si tienes un codigo de descuento, ingresalo ahora:");
-
-let valorFinalProducto = calcularValor (codigoIngresado);
-let producto = buscarArticulo.categoria + buscarArticulo.nombre;
-
-const compra1 = new Compra (talleUsuario, producto);
-
-compra1.finalizar();
-
-
-/////////////// EVENTOS
-
-let boton = document.getElementById("btnProducto01")
-      boton.addEventListener("click", respuestaClick)
-      function respuestaClick(){
-        console.log("Producto 01 ha sido agregado al carrito.");
-      }
-
-
-let miFormulario = document.getElementById("formNewsletter");
-miFormulario.addEventListener("submit", validarFormulario);
-
-function validarFormulario(e){
-    e.preventDefault();
-    console.log("Nuevo email registrado en la base de datos.");    
-}
-
-
-
-/// FUNCIONES
-
-
-
-function validarEntrada (input, condicion1, condicion2) {
-    if (condicion1.toLowerCase() === input.toLowerCase() || condicion2.toLowerCase() === input.toLowerCase()) {
-        return true;
-    }
-
-    return false;
-
-}
-
-
-function calcularValor (codigoIngresado) {
-
-
-    let precioDeLista = articulo1;
-    let valorFinalProducto = 0;
-
-    if (codigoIngresado.toLowerCase () === "micodigo"){
-        valorFinalProducto = precioDeLista - (precioDeLista*0.20);
-    }
-
-    else {
-        valorFinalProducto = precioDeLista;
-    }
-
-    return valorFinalProducto;
-
-}
-
-
-
-function comunicarDisponibilidad (){
-
-    switch(talleUsuario) {
-        case "small":
-        case "s":
-            prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleS)} \n`);
-            break;
-        case "medium":
-        case "m":
-            prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleM)} \n`);
-            break;
-        case "large":
-        case "l":
-            prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleL)} \n`);
-            break;
-        default:
-            alert("No has ingresado ningún talle. Tu pedido no ha sido registrado.");
-    }
+    if (i % 3 === 0) {
+        rowNumber++;
+        row = document.createElement("div");
+        row.id = `row-${rowNumber}`;
+        row.className = "col-8 card-group";
+        rowContainer.appendChild(row);
+    } 
     
- }
+    let newCard = templateCard.cloneNode(true);
 
-function listarProductos(productos) {
-    let result = "";
+    newCard.id = `producto-${producto.id}`;
+    newCard.className = "card";
+    let img = newCard.getElementsByClassName("card-img-top")[0];
+    let title = newCard.getElementsByClassName("card-title")[0];
+    let price = newCard.getElementsByClassName("card-text")[0];
+    let agregar = newCard.getElementsByClassName("agregar")[0];
+    let borrar = newCard.getElementsByClassName("borrar")[0];
 
-    for (let producto of productos) {
-        result += `ID: ${producto.id} - MODELO: ${producto.nombre} - COLOR: ${producto.color} - PRECIO: ${producto.precioIVA()} \n`;
-    }
+    img.src = producto.imgSrc;
+    title.innerHTML = `${producto.categoria} - ${producto.modelo}`;
+    price.innerHTML = `$ ${producto.precio}`;
 
-    return result;
-}
-
-
+    agregar.id = `agregar-${producto.id}`;
+    borrar.id = `borrar-${producto.id}`;
 
 
-
-
-
-
-// function preguntarArticulosAdicionales(articulo) {
     
-//     articulo = 0
+    row.appendChild(newCard);
 
-//     do {
-//        articulo = prompt ("Si deseas algun otro artículo, ingresa ahora su ID. Caso contrario, deja el campo el blanco.");
+} 
+
+// let boton = document.getElementById("producto-1");
+//       boton.addEventListener("click", respuestaClick)
+//       function respuestaClick(){
+
+//         mostrarCarrito()
+
 //     }
-    
-//     while (articulo != 0)
-   
-// }
+
+let boton = document.getElementById("producto-1");
+boton.onclick     = () => {
+
+    let carrito = document.getElementById ('cart__elementosCarrito');
+    let img = document.getElementsByClassName ('cart-img');
+    let title = document.getElementsByClassName ('cart-title');
+    let precio = document.getElementsByClassName ('cart-text');
 
 
+    let div = document.createElement ('div');
+    div.innerHTML = ` 
+        ${img}
+        ${title}
+        ${precio}
+    `
 
-
-// function comunicarDisponibilidad (){
-
-//     switch(talleUsuario) {
-//         case "small":
-//         case "s":
-//             let idElegido = prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleS)} \n`);
-//             return idElegido;
-//         case "medium":
-//         case "m":
-//             prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleM)} \n`);
-//             break;
-//         case "large":
-//         case "l":
-//             prompt (`Ingresa el ID del articulo de tu interes. \n Estos son los productos disponibles en tu talle:\n ${listarProductos(talleL)} \n`);
-//             break;
-//         default:
-//             alert("No has ingresado ningún talle. Tu pedido no ha sido registrado.");
-//     }
-    
-//  }
+    carrito.appendChild (div);
+};

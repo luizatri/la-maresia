@@ -3,6 +3,7 @@
           box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  text-decoration: none;
 }
 
 body {
@@ -11,8 +12,18 @@ body {
   background-color: white;
 }
 
-body a {
+ul li {
+  display: inline;
+  padding-left: 20px;
+}
+
+ul li a {
+  color: #777777;
   text-decoration: none;
+}
+
+ul li a:hover {
+  color: black;
 }
 
 .textoDescuento {
@@ -39,6 +50,101 @@ body a {
   padding-top: 30px;
 }
 
+.navbar span {
+  font-weight: bolder;
+  color: black;
+}
+
+.cart-info__icon {
+  color: var(--mainBlack);
+  cursor: pointer;
+}
+
+.cart-info {
+  border: 0.1rem solid var(--mainBlack);
+  color: var(--mainBlack);
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+
+.cart-info:hover {
+  background: var(--mainPink);
+  border-color: var(--mainPink);
+  color: var(--mainWhite);
+}
+
+.cart-info:hover .cart-info__icon {
+  color: var(--mainWhite);
+}
+
+/* cart  */
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  background: var(--mainWhite);
+  top: 0;
+  right: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.5);
+  width: 18rem;
+  overflow: hidden;
+}
+
+.show-cart {
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  -webkit-transform: rotateY(-360deg);
+          transform: rotateY(-360deg);
+}
+
+.cart-item {
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+/* end of cart */
+/* cart item */
+.cart-item-remove {
+  color: var(--mainPink);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.cart-item-remove:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: var(--mainBlack);
+}
+
+#cart-item-price {
+  font-size: 0.8rem;
+}
+
+/* cart item */
+/* cart buttons */
+.btn-pink {
+  color: var(--mainPink) !important;
+  border-color: var(--mainPink) !important;
+}
+
+.btn-black {
+  color: var(--mainBlack) !important;
+  border-color: var(--mainBlack) !important;
+}
+
+.btn-black:hover {
+  color: var(--mainPink) !important;
+  background: var(--mainBlack) !important;
+}
+
+.btn-pink:hover {
+  background: var(--mainPink) !important;
+  color: var(--mainBlack) !important;
+}
+
+/* end of cart buttons */
 .modal-content {
   margin-top: 40%;
 }
@@ -86,5 +192,9 @@ label {
 
 .card-template {
   visibility: hidden;
+}
+
+.cart__img {
+  width: 70%;
 }
 /*# sourceMappingURL=main.css.map */
