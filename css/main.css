@@ -149,6 +149,10 @@ ul li a:hover {
   margin-top: 40%;
 }
 
+.modal-backdrop {
+  z-index: -1;
+}
+
 /* ==========================================
 
 MEDIA QUERY 576px
@@ -196,5 +200,14 @@ label {
 
 .cart__img {
   width: 70%;
+  padding-top: 100px;
+}
+
+.img-producto {
+  width: 80%;
+}
+
+#cart__elementosCarrito {
+  padding-top: 100px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -84,29 +84,53 @@ for (let i = 0; i < productos.length; i++) {
 
 } 
 
-// let boton = document.getElementById("producto-1");
-//       boton.addEventListener("click", respuestaClick)
-//       function respuestaClick(){
-
-//         mostrarCarrito()
-
-//     }
-
-let boton = document.getElementById("producto-1");
-boton.onclick     = () => {
-
-    let carrito = document.getElementById ('cart__elementosCarrito');
-    let img = document.getElementsByClassName ('cart-img');
-    let title = document.getElementsByClassName ('cart-title');
-    let precio = document.getElementsByClassName ('cart-text');
 
 
-    let div = document.createElement ('div');
-    div.innerHTML = ` 
-        ${img}
-        ${title}
-        ${precio}
-    `
+const carrito = []
 
-    carrito.appendChild (div);
-};
+let boton1 = document.getElementById("producto-1");
+boton1.addEventListener("click", () => agregarElemento(1))  
+
+let boton2 = document.getElementById("producto-2");
+boton2.addEventListener("click", () => agregarElemento(2))  
+
+let boton3 = document.getElementById("producto-3");
+boton3.addEventListener("click", () => agregarElemento(3))  
+
+
+
+function agregarElemento(productoID){
+    let producto = productos.find( (p => p.id === productoID))
+    carrito.push(producto);
+
+    mostrarCarrito();
+
+    alert("Se ha agregado el producto: " + producto.categoria + " " + producto.modelo);
+}
+
+let templateCarrito = document.getElementById ("producto-carrito-template");
+let divCart = document.getElementById("cart-productos");
+
+
+function mostrarCarrito(){    
+
+
+
+    let nuevoProducto = templateCarrito.cloneNode(true);
+
+    let img = nuevoProducto.getElementsByClassName("img-producto");
+    let title = nuevoProducto.getElementsByClassName("titulo-producto");
+    let price = nuevoProducto.getElementsByClassName("precio-producto");
+    
+
+    for (const producto of carrito) {
+    img.src = producto.imgSrc;
+    title.innerHTML = `${producto.categoria} - ${producto.modelo}`;
+    price.innerHTML = `$ ${producto.precio}`;
+
+   divCart.appendChild(nuevoProducto);  
+    
+    }
+
+
+}

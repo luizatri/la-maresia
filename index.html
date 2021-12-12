@@ -48,8 +48,67 @@
 
             
             <li class="nav-item">
-              <span id="contador-items"></span> <a class="nav-link" href="./pages/cart.html" id="cart-info"> 🛒<h6 id="suma-precios"></h6></a>
+              <span id="contador-items"></span> <a class="nav-link class="btn" data-bs-toggle="modal" data-bs-target="#shoppingCart" href="./pages/cart.html" id="cart-info"> 🛒<h6 id="suma-precios"></h6></a>
             </li>
+
+            <!-- MODAL SHOPPING CART  -->
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Tu carrito de compras</h5>
+              <button type="button" class="botones close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="row-cart">
+
+              <div class="col-5" id="cart-productos">
+
+                <div id="producto-carrito-template">
+
+                    <div class="row">
+
+                        <div class="col-3">
+                            <img src="" class="img-producto" alt="...">
+                        </div>
+
+                        <div class="col-3">
+                            <h5 class="titulo-producto"></h5>
+                        </div>
+
+                        <div class="col-3">
+                            <p class="precio-producto"></p>
+                        </div>
+
+                        <div class="col-3">
+                            <a href="#" class="btn btn-primary borrar">🗑️</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Finalizar compra</button> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fin modal---->
+
             
           </ul>
 
@@ -150,7 +209,7 @@
 
       <!-- INICIO FILTRO TALLE Y PRODUCTO -->
 
-      <!-- <div class="row justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-4">
           <div class="input-group mb-3">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -168,7 +227,7 @@
               aria-label="Text input with dropdown button">
           </div>
         </div>
-      </div> -->
+      </div>
 
 
 
@@ -189,35 +248,7 @@
           </button>
         </div>
 
-        <!-- MODAL SHOPPING CART  -->
-
-
-
-        <!-- Modal -->
-        <div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tu carrito de compras</h5>
-                <button type="button" class="botones close" data-bs-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body" id="productosCarrito">
-
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Finalizar compra</button> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- fin modal---->
-
+        
 
     </div>
     </div>
