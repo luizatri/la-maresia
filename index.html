@@ -46,29 +46,31 @@
               <a class="nav-link" href="#">Nosotros</a>
             </li>
 
-            
+
             <li class="nav-item">
-              <span id="contador-items"></span> <a class="nav-link class="btn" data-bs-toggle="modal" data-bs-target="#shoppingCart" href="./pages/cart.html" id="cart-info"> 🛒<h6 id="suma-precios"></h6></a>
+              <span id="contador-items"></span> <a class="nav-link class=" btn" data-bs-toggle="modal"
+                data-bs-target="#shoppingCart" href="./pages/cart.html" id="cart-info"> 🛒<h6 id="suma-precios"></h6>
+              </a>
             </li>
 
             <!-- MODAL SHOPPING CART  -->
 
 
 
-        <!-- Modal -->
-        <div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Tu carrito de compras</h5>
-              <button type="button" class="botones close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" id="row-cart">
+            <!-- Modal -->
+            <div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tu carrito de compras</h5>
+                    <button type="button" class="botones close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" id="carrito">
 
-              <div class="col-5" id="cart-productos">
+                    <!-- <div class="col-5" id="cart-productos">
 
                 <div id="producto-carrito-template">
 
@@ -92,38 +94,42 @@
 
                     </div>
 
+                </div> -->
+
+
+
+                  </div>
+
+                  <div id="precio-total">
+
+                  </div>
+
                 </div>
-
-
-
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Finalizar compra</button> </div>
+              </div>
             </div>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Finalizar compra</button> </div>
-          </div>
         </div>
       </div>
-    </div>
 
-    <!-- fin modal---->
-
-            
-          </ul>
+      <!-- fin modal---->
 
 
-  
-        </div>
+      </ul>
 
 
-      </div> 
-    
+
+      </div>
+
+
+      </div>
+
 
 
     </nav>
 
-    
+
     <!-- FIN NAV BAR -->
 
     <!-- BARRA CODIGO DESCUENTO  -->
@@ -228,47 +234,28 @@
           </div>
         </div>
       </div>
-
-
-
       <!-- FIN FILTRO TALLE Y PRODUCTO -->
 
 
-      <!-- INICIO MODAL ----------------- -->
-
-      <div class="row justify-content-center">
 
 
-        <!-- Button trigger modal -->
+      <!-- INICIO LINEA PRODUCTOS DESTACADOS  -->
 
-        <div class="col-2">
-          <button type="" class="btn" data-bs-toggle="modal" data-bs-target="#shoppingCart">
-            <a class="nav-link" href="#"><img src="images/icons/shoppingcartbutton.png" id="shoppingIcon"
-                alt="shopping cart"></a>
-          </button>
+      <div id="row-container" class="row justify-content-center">
+        <div class="card card-template">
+          <img src="" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary agregar"> Agregar al carrito 🛒</a>
+            <a href="#" class="btn btn-primary borrar">🗑️</a>
+          </div>
         </div>
 
-        
 
-    </div>
-    </div>
-
-
-    <!-- INICIO LINEA PRODUCTOS DESTACADOS  -->
-
-    <div id="row-container" class="row justify-content-center">
-      <div class="card card-template">
-        <img src="" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text"></p>
-          <a href="#" class="btn btn-primary agregar"> Agregar al carrito 🛒</a>
-          <a href="#" class="btn btn-primary borrar">🗑️</a>
-        </div>
       </div>
 
 
-    </div>
 
 
 
@@ -277,19 +264,17 @@
 
 
 
+      <!-- FIN LINEA DE PRODUCTOS DESTACADOS -->
 
 
-    <!-- FIN LINEA DE PRODUCTOS DESTACADOS -->
+      <!-- INICIO COLECCIONES -->
 
 
-    <!-- INICIO COLECCIONES -->
+      <!-- COLECCION 01 -->
 
+      <!-- COLECCION 02 -->
 
-    <!-- COLECCION 01 -->
-
-    <!-- COLECCION 02 -->
-
-    <!-- COLECCION 03 -->
+      <!-- COLECCION 03 -->
 
 
     </div>

@@ -88,16 +88,92 @@ for (let i = 0; i < productos.length; i++) {
 
 const carrito = []
 
-let boton1 = document.getElementById("producto-1");
+let boton1 = document.getElementById("agregar-1");
 boton1.addEventListener("click", () => agregarElemento(1))  
 
-let boton2 = document.getElementById("producto-2");
+let boton2 = document.getElementById("agregar-2");
 boton2.addEventListener("click", () => agregarElemento(2))  
 
-let boton3 = document.getElementById("producto-3");
+let boton3 = document.getElementById("agregar-3");
 boton3.addEventListener("click", () => agregarElemento(3))  
 
+let boton4 = document.getElementById("agregar-4");
+boton4.addEventListener("click", () => agregarElemento(4))  
 
+let boton5 = document.getElementById("agregar-5");
+boton5.addEventListener("click", () => agregarElemento(5))  
+
+let boton6 = document.getElementById("agregar-6");
+boton6.addEventListener("click", () => agregarElemento(6))  
+
+let boton7 = document.getElementById("agregar-7");
+boton7.addEventListener("click", () => agregarElemento(7))  
+
+let boton8 = document.getElementById("agregar-8");
+boton8.addEventListener("click", () => agregarElemento(8))  
+
+let boton9 = document.getElementById("agregar-9");
+boton9.addEventListener("click", () => agregarElemento(9))  
+
+
+
+
+
+
+let templateCarrito = document.getElementById ("producto-carrito-template");
+let divCart = document.getElementById("cart-productos");
+
+
+function mostrarCarrito(){    
+
+
+    let precioTotal = 0;
+    let contenedor = document.getElementById ("carrito")
+
+contenedor.innerHTML ="";
+htmlString = "<div>";
+
+for (const id in carrito) {
+
+    let producto = carrito[id];
+    htmlString += `
+    <div>
+
+    <div class="row ">
+
+        <div class="col-3">
+            <img src="${producto.imgSrc}" class="img-producto">
+        </div>
+
+        <div class="col-3">
+            <h5 class="titulo-producto"> ${producto.categoria} + ${producto.modelo}</h5>
+        </div>
+
+        <div class="col-3">
+            <p class="precio-producto">$ ${producto.precio}</p>
+        </div>
+
+        <div class="col-3">
+            <a href="#" class="btn btn-primary eliminar" id="borrar_${id}">🗑️</a>
+        </div>
+
+    </div>
+
+</div>
+      `
+      precioTotal += producto.precio;
+}
+htmlString += "</div>";
+
+
+contenedor.innerHTML = htmlString;
+
+let contenedorPrecio = document.getElementById ("precio-total")
+contenedorPrecio.innerHTML = `TOTAL: ${precioTotal} `
+
+eliminarCarrito ()
+
+}
 
 function agregarElemento(productoID){
     let producto = productos.find( (p => p.id === productoID))
@@ -108,29 +184,17 @@ function agregarElemento(productoID){
     alert("Se ha agregado el producto: " + producto.categoria + " " + producto.modelo);
 }
 
-let templateCarrito = document.getElementById ("producto-carrito-template");
-let divCart = document.getElementById("cart-productos");
+function eliminarCarrito () {
+    let botones = document.getElementsByClassName("eliminar");
 
+    for (const boton of botones) {
+        boton.onclick = () => {
+            let id = boton.getAttribute ("id");
+            idNumber = id.split ("_") [1];
+            carrito.splice(idNumber, 1);
 
-function mostrarCarrito(){    
-
-
-
-    let nuevoProducto = templateCarrito.cloneNode(true);
-
-    let img = nuevoProducto.getElementsByClassName("img-producto");
-    let title = nuevoProducto.getElementsByClassName("titulo-producto");
-    let price = nuevoProducto.getElementsByClassName("precio-producto");
-    
-
-    for (const producto of carrito) {
-    img.src = producto.imgSrc;
-    title.innerHTML = `${producto.categoria} - ${producto.modelo}`;
-    price.innerHTML = `$ ${producto.precio}`;
-
-   divCart.appendChild(nuevoProducto);  
-    
+            mostrarCarrito();
+        }
     }
-
 
 }

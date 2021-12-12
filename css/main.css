@@ -164,6 +164,10 @@ MEDIA QUERY 576px
   }
 }
 
+.img-producto {
+  width: 70%;
+}
+
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
@@ -196,18 +200,5 @@ label {
 
 .card-template {
   visibility: hidden;
-}
-
-.cart__img {
-  width: 70%;
-  padding-top: 100px;
-}
-
-.img-producto {
-  width: 80%;
-}
-
-#cart__elementosCarrito {
-  padding-top: 100px;
 }
 /*# sourceMappingURL=main.css.map */
