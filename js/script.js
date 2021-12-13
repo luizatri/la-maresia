@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    console.log('El DOM está listo.');
+});
+
 class Producto {
     constructor (id, categoria, nombre, color, talle, precio) {
         this.id = parseFloat(id);
@@ -76,7 +80,6 @@ for (let i = 0; i < productos.length; i++) {
     price.innerHTML = `$ ${producto.precio}`;
 
     agregar.id = `agregar-${producto.id}`;
-    borrar.id = `borrar-${producto.id}`;
 
 
     
@@ -88,33 +91,42 @@ for (let i = 0; i < productos.length; i++) {
 
 const carrito = []
 
-let boton1 = document.getElementById("agregar-1");
-boton1.addEventListener("click", () => agregarElemento(1))  
-
-let boton2 = document.getElementById("agregar-2");
-boton2.addEventListener("click", () => agregarElemento(2))  
-
-let boton3 = document.getElementById("agregar-3");
-boton3.addEventListener("click", () => agregarElemento(3))  
-
-let boton4 = document.getElementById("agregar-4");
-boton4.addEventListener("click", () => agregarElemento(4))  
-
-let boton5 = document.getElementById("agregar-5");
-boton5.addEventListener("click", () => agregarElemento(5))  
-
-let boton6 = document.getElementById("agregar-6");
-boton6.addEventListener("click", () => agregarElemento(6))  
-
-let boton7 = document.getElementById("agregar-7");
-boton7.addEventListener("click", () => agregarElemento(7))  
-
-let boton8 = document.getElementById("agregar-8");
-boton8.addEventListener("click", () => agregarElemento(8))  
-
-let boton9 = document.getElementById("agregar-9");
-boton9.addEventListener("click", () => agregarElemento(9))  
-
+let boton1 = $("#agregar-1");
+boton1.click(function () {
+    agregarElemento(1)});
+  
+let boton2 = $("#agregar-2");
+boton2.click(function () {
+    agregarElemento(2)});
+  
+let boton3 = $("#agregar-3");
+boton3.click(function () {
+    agregarElemento(3)});
+  
+let boton4 = $("#agregar-4");
+boton4.click(function () {
+    agregarElemento(4)});
+  
+let boton5 = $("#agregar-5");
+boton5.click(function () {
+    agregarElemento(5)});
+  
+let boton6 = $("#agregar-6");
+boton6.click(function () {
+    agregarElemento(6)});
+  
+let boton7 = $("#agregar-7");
+boton7.click(function () {
+    agregarElemento(7)});
+  
+let boton8 = $("#agregar-8");
+boton8.click(function () {
+    agregarElemento(8)});
+  
+let boton9 = $("#agregar-");
+boton9.click(function () {
+    agregarElemento(9)});
+  
 
 
 
@@ -175,13 +187,14 @@ eliminarCarrito ()
 
 }
 
+
+
 function agregarElemento(productoID){
     let producto = productos.find( (p => p.id === productoID))
     carrito.push(producto);
 
     mostrarCarrito();
 
-    alert("Se ha agregado el producto: " + producto.categoria + " " + producto.modelo);
 }
 
 function eliminarCarrito () {
