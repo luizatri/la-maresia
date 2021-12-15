@@ -201,4 +201,39 @@ label {
 .card-template {
   visibility: hidden;
 }
+
+.productos__index {
+  position: relative;
+}
+
+.productos__img {
+  height: auto;
+  width: 100%;
+}
+
+.productos__imgOverlay {
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(94, 102, 94, 0.4);
+}
+
+.productos__imgOverlay p, .productos__imgOverlay h5 {
+  color: #fff8ea;
+  font-size: 2.5vh;
+}
+
+.productos__btn {
+  padding-top: 30%;
+}
+
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 20%;
+}
 /*# sourceMappingURL=main.css.map */

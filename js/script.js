@@ -75,14 +75,13 @@ for (let i = 0; i < productos.length; i++) {
     let agregar = newCard.getElementsByClassName("agregar")[0];
     let borrar = newCard.getElementsByClassName("borrar")[0];
 
+
     img.src = producto.imgSrc;
     title.innerHTML = `${producto.categoria} - ${producto.modelo}`;
     price.innerHTML = `$ ${producto.precio}`;
 
     agregar.id = `agregar-${producto.id}`;
 
-
-    
     row.appendChild(newCard);
 
 } 
@@ -150,27 +149,20 @@ for (const id in carrito) {
     let producto = carrito[id];
     htmlString += `
     <div>
-
     <div class="row ">
-
         <div class="col-3">
             <img src="${producto.imgSrc}" class="img-producto">
         </div>
-
         <div class="col-3">
             <h5 class="titulo-producto"> ${producto.categoria} + ${producto.modelo}</h5>
         </div>
-
         <div class="col-3">
             <p class="precio-producto">$ ${producto.precio}</p>
         </div>
-
         <div class="col-3">
             <a href="#" class="btn btn-primary eliminar" id="borrar_${id}">🗑️</a>
         </div>
-
     </div>
-
 </div>
       `
       precioTotal += producto.precio;
@@ -211,3 +203,22 @@ function eliminarCarrito () {
     }
 
 }
+
+// function sumarItems () {
+
+//     let numeroCarrito = $("#suma-items");
+
+    
+//     if (agregarElemento()) {
+//     let sumaCarrito = 0
+//     sumaCarrito++
+
+
+//     }
+
+//     numeroCarrito.appendChild("(" + sumarCarrito + ")");
+
+//     return
+// }
+
+// sumarItems()

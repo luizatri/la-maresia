@@ -49,7 +49,7 @@
 
             <li class="nav-item">
               <span id="contador-items"></span> <a class="nav-link class=" btn" data-bs-toggle="modal"
-                data-bs-target="#shoppingCart" href="./pages/cart.html" id="cart-info"> 🛒<h6 id="suma-precios"></h6>
+                data-bs-target="#shoppingCart" href="./pages/cart.html" id="cart-info"> 🛒<h6 id="suma-items"></h6>
               </a>
             </li>
 
@@ -238,15 +238,17 @@
 
 
 
-
       <!-- INICIO LINEA PRODUCTOS DESTACADOS  -->
 
       <div id="row-container" class="row justify-content-center">
         <div class="card card-template">
           <img src="" class="card-img-top" alt="...">
-          <div class="card-body">
+          <div class="productos__imgOverlay">
             <h5 class="card-title"></h5>
             <p class="card-text"></p>
+          </div>
+          <div class="card-body">
+
             <a href="#" class="btn btn-primary agregar"> Agregar al carrito 🛒</a>
           </div>
         </div>

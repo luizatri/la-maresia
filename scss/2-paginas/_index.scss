@@ -36,4 +36,40 @@
   }
 
 
-  
+.productos__index {
+    position: relative;
+}
+
+.productos__img {
+    height: auto;
+    width: 100%;
+}
+
+.productos__imgOverlay {
+    position: absolute;
+    top: 40%;
+    bottom: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(94, 102, 94, 0.4)  ;
+    
+    p, h5 {
+
+        color: rgb(255, 248, 234);
+        font-size: 2.5vh;
+
+    }
+
+}
+
+.productos__btn{
+    padding-top: 30%;
+}
+
+.img-overlay:before {
+    content: ' ';
+    display: block;
+    /* adjust 'height' to position overlay content vertically */
+    height: 20%;
+  }
