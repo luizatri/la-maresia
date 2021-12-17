@@ -128,7 +128,7 @@ boton9.click(function () {
     agregarElemento(9)});
   
 
-
+localStorage.setItem("carrito", carrito);
 
 
 
@@ -195,6 +195,8 @@ function agregarElemento(productoID){
 
     mostrarCarrito();
 
+    cartCount();
+
 }
 
 function eliminarCarrito () {
@@ -211,3 +213,13 @@ function eliminarCarrito () {
     }
 
 }
+
+
+
+function cartCount() {
+    $("#item-count").html(" (" + carrito.length + ") ");
+    $("#cart-icon").html(" (" + carrito.length + ") ");
+}
+
+
+

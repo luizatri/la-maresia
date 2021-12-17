@@ -42,8 +42,10 @@ ul li a:hover {
   color: #ebe9e7;
 }
 
-#shoppingIcon {
-  width: 50%;
+#cart-icon {
+  width: 10%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .navbar {
