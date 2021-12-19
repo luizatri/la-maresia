@@ -103,6 +103,7 @@ for (const btnAgregar of botonesAgregar) {
         if (id.length) {
             const idx = id.split("-")[1];
             agregarElemento(parseInt(idx));
+            return false;
         }
     });
 }
@@ -183,9 +184,13 @@ function eliminarCarrito() {
             let producto = productos.find((p => p.id === productoID));
             carrito.splice(carrito.indexOf(producto), 1);
 
+
             adicionarProductoACarrito();
 
             cartCount();
+
+            return false;
+
 
         }
     }

@@ -216,5 +216,14 @@ label {
 
 .card-template {
   visibility: hidden;
+  display: none;
+}
+
+.card-template .card.body {
+  padding: 0px;
+}
+
+.row {
+  --bs-gutter-x: none;
 }
 /*# sourceMappingURL=main.css.map */

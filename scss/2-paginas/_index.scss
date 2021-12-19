@@ -33,5 +33,17 @@
 
   .card-template {
       visibility: hidden;
+      display: none;
+
+      .card.body {
+
+        padding: 0px;
+
+        }
+  }
+
+  .row {
+    --bs-gutter-x: none;
+
   }
 
