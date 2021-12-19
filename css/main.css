@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: #3F3E3B;
   background-color: white;
 }
@@ -168,6 +168,20 @@ MEDIA QUERY 576px
 
 .img-producto {
   width: 70%;
+}
+
+.botones {
+  padding: 9px 20px;
+  background-color: #08a8a0;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.botones:hover {
+  background: #05767e;
 }
 
 .container-fluid {

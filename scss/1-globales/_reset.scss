@@ -1,32 +1,31 @@
-
-
 // RESET //
 
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 
-      text-decoration: none;
+  text-decoration: none;
 
 }
 
 body {
-    font-family: 'PT Sans', sans-serif;
-    color:#3F3E3B;
-    background-color: white;
-      
+  font-family: 'Nunito', sans-serif;
+  color: #3F3E3B;
+  background-color: white;
+
 }
 
 ul {
-    
+
   li {
     display: inline;
     padding-left: 20px;
+
     a {
       color: #777777;
       text-decoration: none;
-      
+
       &:hover {
         color: black;
       }
