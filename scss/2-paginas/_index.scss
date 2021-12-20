@@ -10,16 +10,32 @@
 
 }
 
-.home__textoPrincipal {
+.row-clima {
+
+    background-color: rgb(243, 238, 205);
+
+}
+
+.home__textoPrincipal {     
 
     padding-top: 3%;
+    padding-bottom: 3%;
     
     h1 {
         font-size: 1.5rem;
     }
 }
 
+.home__clima {
 
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    h1 {
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+}
 .formulario__newsletter {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -47,3 +63,85 @@
 
   }
 
+#row-container {
+    padding-top: 2%;
+}
+
+// API CLIMA
+
+.ajax-section {
+    margin: 70px 0 20px;
+  }
+  
+  .ajax-section .cities {
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .ajax-section .city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_med);
+  }
+  
+  .ajax-section .city::after {
+    content: '';
+    width: 80%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background: var(--text_light);
+  }
+  
+  .ajax-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .ajax-section .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+  }
+  
+  .ajax-section .city sup {
+    font-size: 0.5em;
+  }
+  
+  .ajax-section .city-name sup {
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: var(--orange);
+    
+  }
+
+  .city-name {
+      font-size: 5vh;
+  }
+  
+  .ajax-section .city-icon {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+  }
+  
+
+  .city-icon {
+
+        width: 30%;
+    
+  }
+
+  .api-clima {
+    padding-right: 50px;
+  }

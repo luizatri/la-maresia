@@ -155,10 +155,12 @@ function adicionarProductoACarrito() {
 
     let contenedorPrecio = $("#precio-total")
     contenedorPrecio.html(`TOTAL: ${precioTotal}`)
+    
 
     eliminarCarrito()
 
 }
+
 
 
 
@@ -202,4 +204,7 @@ function eliminarCarrito() {
 function cartCount() {
     $("#item-count").html(" (" + carrito.length + ") ");
     $("#cart-icon").html(" (" + carrito.length + ") ");
+
+    let carritoLleno = JSON.stringify(carrito);
+    localStorage.setItem("carrito", carritoLleno);
 }

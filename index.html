@@ -189,7 +189,12 @@
 
       <!-- FIN TEXTO ABOUT HOME -->
 
+
+
+
       <!-- INICIO FILTRO TALLE Y PRODUCTO -->
+
+
 
       <!-- <div class="row justify-content-center">
         <div class="col-4">
@@ -254,6 +259,70 @@
 
     </div>
 
+
+
+    <!-- INICIO API CLIMA -->
+<!-- 
+    <div class="row justify-content-center row-clima">
+
+      <div class="col-2 text-center home__clima">
+
+        <div>
+          <h1>¿Cómo está el clima? </h1>
+        </div>
+
+        <div>
+          <input type="text" placeholder="Escribe tu ciudad" id="valor-ciudad">
+          <input type="submit" value="Quiero saber" class="botones" id="btn-clima">
+
+        </div>
+
+      </div>
+
+
+      <div class="col-3 display">
+        <h1 class="nombre"></h1>
+        <p class="desc"></p>
+        <p class="temp"></p>
+
+      </div>
+
+
+
+
+    </div>
+    </div> -->
+
+    <!-- FIN API CLIMA -->
+
+
+    <!-- INICIO API CLIMA 2 -->
+
+
+    <div class="row justify-content-center row-clima top-banner">
+
+      <div class="col-2 home__clima">
+        <h1 class="heading">¿Cómo está el clima en tu ciudad?</h1>
+        <form>
+          <input type="text" placeholder="Escribe tu ciudad" id= "valor-ciudad" autofocus>
+          <button type="submit" class="botones" id="btn-clima">QUIERO SABER</button>
+          <span class="msg"></span>
+        </form>
+      </div>
+
+      <div class="col-3 api-clima">
+        <div class="container">
+          <ul class="cities"></ul>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- FIN API CLIMA 2 -->
+
+
   </main>
 
   <!-- INICIO FOOTER -->
@@ -267,6 +336,7 @@
 
   <script src="js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/api.js"></script>
   <script src="js/script.js"></script>
 
 
